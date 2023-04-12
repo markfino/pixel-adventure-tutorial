@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://8up7iho8uxrq"]
+
+[ext_resource type="Texture2D" uid="uid://bhbn0qhx17scm" path="res://Art/kiwi_health_indicator.png" id="1_03xlf"]
+[ext_resource type="Script" path="res://UI/HealthBar.gd" id="1_aghxi"]
+
+[node name="HealthBar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_aghxi")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_direction = 2
+layout_mode = 1
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 23.0
+offset_bottom = 25.0
+texture = ExtResource("1_03xlf")
+stretch_mode = 1

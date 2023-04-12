@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://dlurskxuql5aw"]
+
+[ext_resource type="Texture2D" uid="uid://d0w31pi6r76y8" path="res://Art/Pixel Adventure 1/Background/Yellow.png" id="1_74bj3"]
+[ext_resource type="TileSet" uid="uid://xksugbditki" path="res://Maps/pixel_adventure_terrain.tres" id="2_vefsn"]
+[ext_resource type="PackedScene" uid="uid://teq1kgqbsybx" path="res://Characters/Player.tscn" id="3_ow1vx"]
+[ext_resource type="PackedScene" uid="uid://38vggp1eolei" path="res://Camera/FollowCamera.tscn" id="4_fty5r"]
+[ext_resource type="PackedScene" uid="uid://b2v3656kv5tnh" path="res://Characters/Enemies/AngryPig.tscn" id="5_lfdn6"]
+[ext_resource type="PackedScene" uid="uid://cxmgfyqeyqxsy" path="res://Zones/BottomOfScreen.tscn" id="6_ciqep"]
+[ext_resource type="PackedScene" uid="uid://b5i4jqxf4w40r" path="res://UI/GameUI.tscn" id="7_lsf8t"]
+
+[node name="Level3" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(834, 257)
+texture = ExtResource("1_74bj3")
+region_enabled = true
+region_rect = Rect2(0, 0, 1500, 1000)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("2_vefsn")
+format = 2
+layer_0/tile_data = PackedInt32Array(917549, 786434, 0, 917550, 851970, 0, 589873, 786434, 0, 589874, 851970, 0, 589875, 851970, 0, 589876, 851970, 0, 589877, 851970, 0, 589878, 851970, 0, 589879, 851970, 0, 589880, 851970, 0, 589881, 851970, 0, 589882, 851970, 0, 589883, 917506, 0, 917551, 917506, 0, 786503, 786434, 0, 786504, 851970, 0, 786505, 917506, 0, 589854, 131074, 1, 655390, 131074, 2, 524318, 131074, 1, 458782, 131074, 1, 327710, 131074, 0, 262174, 131074, 0, 393246, 131074, 1, 131100, 131074, 1, 65564, 131074, 1, 28, 131074, 1, -65508, 131074, 1, -131044, 131074, 1, -196580, 131074, 1, 262173, 65538, 0, 196636, 131074, 1, 262172, 196610, 1, 393268, 2, 0, 458804, 2, 1, 524340, 2, 2, 196660, 2, 0, 262196, 2, 1, 327732, 2, 2, 65588, 2, 1, 131124, 2, 2, 589884, 1114114, 1, 589885, 1179650, 1, 589886, 1245186, 1, 589887, 1114114, 1, 589888, 1179650, 1, 589889, 1245186, 1, 786479, 1114114, 1, 786480, 1179650, 1, 786481, 1245186, 1, 393277, 1114114, 1, 393278, 1179650, 1, 393279, 1245186, 1, 1048606, 393218, 0, 1114142, 393218, 1, 1048607, 458754, 0, 1114143, 458754, 1, 1048608, 524290, 0, 1114144, 524290, 1, 1048609, 393218, 0, 1114145, 393218, 1, 1048610, 458754, 0, 1114146, 458754, 1, 1048611, 524290, 0, 1114147, 524290, 1, 1048612, 393218, 0, 1114148, 393218, 1, 1048613, 458754, 0, 1114149, 458754, 1, 1048614, 524290, 0, 1114150, 524290, 1, 1048615, 393218, 0, 1114151, 393218, 1, 1048616, 458754, 0, 1114152, 458754, 1, 1048617, 524290, 0, 1114153, 524290, 1, 1048618, 393218, 0, 1114154, 393218, 1, 1048619, 458754, 0, 1114155, 458754, 1, 1048620, 524290, 0, 1114156, 524290, 1, 1048621, 393218, 0, 1114157, 393218, 1, 1048622, 458754, 0, 1114158, 458754, 1, 1048623, 524290, 0, 1114159, 524290, 1, 1048624, 393218, 0, 1114160, 393218, 1, 1048625, 458754, 0, 1114161, 458754, 1, 1048626, 524290, 0, 1114162, 524290, 1, 1048627, 393218, 0, 1114163, 393218, 1, 1048628, 458754, 0, 1114164, 458754, 1, 1048629, 524290, 0, 1114165, 524290, 1, 1048630, 393218, 0, 1114166, 393218, 1, 1048631, 458754, 0, 1114167, 458754, 1, 1048632, 524290, 0, 1114168, 524290, 1, 1048633, 393218, 0, 1114169, 393218, 1, 1048634, 458754, 0, 1114170, 458754, 1, 1048635, 524290, 0, 1114171, 524290, 1, 1048636, 393218, 0, 1114172, 393218, 1, 1048637, 458754, 0, 1114173, 458754, 1, 1048638, 524290, 0, 1114174, 524290, 1, 1048639, 393218, 0, 1114175, 393218, 1, 1048640, 458754, 0, 1114176, 458754, 1, 1048641, 524290, 0, 1114177, 524290, 1, 1048642, 393218, 0, 1114178, 393218, 1, 1048643, 458754, 0, 1114179, 458754, 1, 1048644, 524290, 0, 1114180, 524290, 1, 1048645, 393218, 0, 1114181, 393218, 1, 1048646, 458754, 0, 1114182, 458754, 1, 1048647, 524290, 0, 1114183, 524290, 1, 1048648, 393218, 0, 1114184, 393218, 1, 1048649, 458754, 0, 1114185, 458754, 1, 1048650, 524290, 0, 1114186, 524290, 1, 720926, 983042, 0, 786462, 983042, 1, 851998, 983042, 1, 917534, 983042, 1, 983070, 983042, 2)
+
+[node name="Player" parent="." instance=ExtResource("3_ow1vx")]
+position = Vector2(650, 152)
+health = 3.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../FollowCamera")
+
+[node name="FollowCamera" parent="." instance=ExtResource("4_fty5r")]
+position = Vector2(650, 152)
+
+[node name="TopLeft" parent="FollowCamera/Bounds" index="0"]
+position = Vector2(315, -297)
+
+[node name="BottomRight" parent="FollowCamera/Bounds" index="1"]
+position = Vector2(1312, 304)
+
+[node name="AngryPig" parent="." instance=ExtResource("5_lfdn6")]
+position = Vector2(932, 241)
+waypoints = Array[NodePath]([NodePath("../Waypoints/Waypoint1"), NodePath("../Waypoints/Waypoint2")])
+
+[node name="AngryPig2" parent="." instance=ExtResource("5_lfdn6")]
+position = Vector2(1139, 238)
+waypoints = Array[NodePath]([NodePath("../Waypoints/Waypoint3"), NodePath("../Waypoints/Waypoint4")])
+
+[node name="Waypoints" type="Node2D" parent="."]
+
+[node name="Waypoint1" type="Marker2D" parent="Waypoints"]
+position = Vector2(864, 241)
+
+[node name="Waypoint2" type="Marker2D" parent="Waypoints"]
+position = Vector2(1063, 241)
+
+[node name="Waypoint3" type="Marker2D" parent="Waypoints"]
+position = Vector2(1096, 243)
+
+[node name="Waypoint4" type="Marker2D" parent="Waypoints"]
+position = Vector2(1195, 242)
+
+[node name="BottomOfScreen" parent="." instance=ExtResource("6_ciqep")]
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="GameUI" parent="." instance=ExtResource("7_lsf8t")]
+
+[connection signal="body_shape_entered" from="BottomOfScreen" to="BottomOfScreen" method="_on_body_shape_entered"]
+
+[editable path="FollowCamera"]

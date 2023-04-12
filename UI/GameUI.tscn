@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5i4jqxf4w40r"]
+
+[ext_resource type="PackedScene" uid="uid://8up7iho8uxrq" path="res://UI/HealthBar.tscn" id="2_alddt"]
+[ext_resource type="PackedScene" uid="uid://by33ft3b2wfqe" path="res://UI/GameOverScreen.tscn" id="2_g5dt2"]
+
+[node name="GameUI" type="CanvasLayer"]
+
+[node name="GameOverScreen" parent="." instance=ExtResource("2_g5dt2")]
+
+[node name="HealthBar" parent="." instance=ExtResource("2_alddt")]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxrbyj37ttgvb"]
+
+[ext_resource type="Script" path="res://Singleton/game_settings.gd" id="1_i6kow"]
+
+[node name="GameSettings" type="Node"]
+script = ExtResource("1_i6kow")

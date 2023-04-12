@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://by33ft3b2wfqe"]
+
+[ext_resource type="Script" path="res://UI/GameOverScreen.gd" id="1_65t30"]
+
+[sub_resource type="Gradient" id="Gradient_46346"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.363636, 0.834711)
+colors = PackedColorArray(0, 0, 0, 1, 0.180005, 0.180005, 0.180005, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_soapp"]
+gradient = SubResource("Gradient_46346")
+
+[node name="GameOverScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_65t30")
+
+[node name="Screen" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Screen"]
+layout_mode = 0
+offset_right = 426.0
+offset_bottom = 240.0
+texture = SubResource("GradientTexture2D_soapp")
+
+[node name="Label" type="Label" parent="Screen"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 96.0
+offset_right = 304.0
+offset_bottom = 152.0
+theme_override_font_sizes/font_size = 15
+text = "It's the end..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
